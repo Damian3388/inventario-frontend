@@ -1,4 +1,4 @@
-const API_URL = "https://inventario-backend-xyz.onrender.com/productos";
+const API_URL = "https://inventario-backend-8jtf.onrender.com/productos";
 // Función para consultar los datos guardados en MongoDB Atlas
 async function obtenerProductos() {
 try {
