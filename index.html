@@ -6,39 +6,45 @@
 <title>Inventario NoSQL</title>
 <style>
 body { font-family: Arial, sans-serif; background: #f4f6f9; padding: 20px; }
-.container { max-width: 600px; margin: 0 auto; }
+.container { max-width: 700px; margin: 0 auto; }
 .card { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;
 box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-input, button { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
-button { background: #0066cc; color: white; border: none; cursor: pointer; font-weight:
-bold; }
+input, button[type="submit"] { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
+button[type="submit"] { background: #0066cc; color: white; border: none; cursor: pointer; font-weight: bold; border-radius: 4px; }
 table { width: 100%; border-collapse: collapse; background: white; }
 th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
 th { background-color: #0066cc; color: white; }
+td:last-child { white-space: nowrap; }
 </style>
 </head>
 <body>
 <div class="container">
-<h2> Panel de Inventario (MongoDB Atlas)</h2>
-<div class="card">
-<h3>Registrar Producto</h3>
-<form id="formProducto">
-<input type="text" id="nombre" placeholder="Nombre del artículo" required>
-<input type="number" id="precio" placeholder="Precio ($)" required>
-<input type="number" id="existencia" placeholder="Cantidad" required>
-<button type="submit">Enviar a la Nube</button>
-</form>
-</div>
+  <h2>📦 Panel de Inventario (MongoDB Atlas)</h2>
 
-<div class="card">
-<h3>Existencias en Base de Datos</h3>
-<table>
-<thead>
-<tr><th>Artículo</th><th>Precio</th><th>Stock</th></tr>
-</thead>
-<tbody id="tabla"></tbody>
-</table>
-</div>
+  <div class="card">
+    <h3>Registrar Producto</h3>
+    <form id="formProducto">
+      <input type="text" id="nombre" placeholder="Nombre del artículo" required>
+      <input type="number" id="precio" placeholder="Precio ($)" required>
+      <input type="number" id="existencia" placeholder="Cantidad" required>
+      <button type="submit">Enviar a la Nube</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h3>Existencias en Base de Datos</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Artículo</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tabla"></tbody>
+    </table>
+  </div>
 </div>
 <script src="app.js"></script>
 </body>
