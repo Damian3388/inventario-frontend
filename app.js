@@ -1,4 +1,4 @@
-const API_URL = "https://inventario-backend-8jtf.onrender.com/productos";
+const API_URL = "https://inventario-backend-9yx1.onrender.com/productos";
 
 let modoEdicion = false;
 let idEditando = null;
